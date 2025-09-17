@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN npm install --global vlocity
 RUN echo "y" | sf plugins install sf-orgdevmode-builds
 RUN sf plugins install @salesforce/sfdx-scanner@latest
+RUN echo 'y' | sf plugins install sfdx-git-delta
 
 RUN npm config set @omnistudio:registry https://repo.vlocity.com/repository/vlocity-public/
 RUN npm config set @vlocity-cme:registry https://repo.vlocity.com/repository/vlocity-public/
